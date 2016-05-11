@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+<h2>Cerca un distributore</h2>
+<form class="search" action="index.html" method="post">
+    <br />
+    <input class="searchForm" type="text" name="city" value="" placeholder="Inserisci la città">
+    <label for="sigarette">Sigarette</label>
+    <input type="checkbox" name="sigarette" value="Sigarette" checked>
+    <label for="tabacco">Tabacco</label>
+    <input type="checkbox" name="tabacco" value="Tabacco" checked>
+    <label for="comdom">Condom</label>
+    <input type="checkbox" name="comdom" value="Comdom">
+    <input class="searchForm" type="number" name="resto" min="2" max="15" placeholder="Resto massimo erogato">
+    <input type="submit" name="invia" value="CERCA">
+</form>
+<img id="mapSample" src="{{ asset('img/map_sample.png') }}" alt="mappa" />
+
+{% endblock %}

@@ -1,0 +1,47 @@
+main_homepage:
+    path:     /
+    defaults: { _controller: MainBundle:Default:index }
+
+main_results:
+    path:     results
+    defaults: { _controller: MainBundle:Default:results }
+
+main_singleResult:
+    path:     singleResult
+    defaults: { _controller: MainBundle:Default:singleResult }
+
+footer_chisiamo:
+    path:     chisiamo
+    defaults: { _controller: MainBundle:Footer:chisiamo }
+
+footer_privacy:
+    path:     privacy
+    defaults: { _controller: MainBundle:Footer:privacy }
+
+footer_segnalazioni:
+    path:     segnalazioni
+    defaults: { _controller: MainBundle:Footer:segnalazioni }
+
+Admin_addAdmin:
+    path:     admin/addAdmin
+    defaults: { _controller: MainBundle:Admin:addAdmin }
+
+Admin_dispencer:
+    path:     admin/dispencer
+    defaults: { _controller: MainBundle:Admin:dispencer }
+
+Admin_dispencers:
+    path:     admin/dispencers
+    defaults: { _controller: MainBundle:Admin:dispencers }
+
+Admin_addDispencer:
+    path:     admin/addDispencer
+    defaults: { _controller: MainBundle:Admin:addDispencer }
+
+Admin_removeDispencer:
+    path:     admin/removeDispencer
+    defaults: { _controller: MainBundle:Admin:removeDispencer }
+
+Admin_updateDispencer:
+    path:     admin/updateDispencer
+    defaults: { _controller: MainBundle:Admin:updateDispencer }
