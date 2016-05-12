@@ -26,6 +26,10 @@ Admin_addAdmin:
     path:     admin/addAdmin
     defaults: { _controller: MainBundle:Admin:addAdmin }
 
+Admin_removeAdmin:
+    path:     admin/removeAdmin
+    defaults: { _controller: MainBundle:Admin:removeAdmin }
+
 Admin_dispencer:
     path:     admin/dispencer
     defaults: { _controller: MainBundle:Admin:dispencer }

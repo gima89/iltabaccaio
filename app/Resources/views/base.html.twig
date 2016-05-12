@@ -6,25 +6,44 @@
         <meta name="description" content="Trova il distributore di sigarette più vicino a te!" />
         <title>{% block title %}il Tabaccaio{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('img/tabaccaio_favicon.png') }}" />
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- fine Bootstrap -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/reset.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" />
     </head>
     <body>
 
         {% block header %}
-        <header>
-            <h1>il Tabaccaio</h1>
-        </header>
+        <nav>
+            <header>
+                <a href="{{ url('main_homepage') }}"><h1>il Tabaccaio</h1></a>
+            </header>
+        </nav>
         {% endblock %}
 
         {% block body %}{% endblock %}
 
         {% block footer %}
         <footer>
-            Il footer fa bene alla salute
+            <!-- Il footer nuoce gravemente alla salute -->
+            <!-- Chi Siamo  -  Privacy Policy  -  Segnala Distributore -->
+            <nav>
+
+                <a href="{{ url('footer_chisiamo') }}">Chi siamo</a><span> - </span>
+                <a href="{{ url('footer_privacy') }}">Privacy policy</a><span> - </span>
+                <a href="{{ url('footer_segnalazioni') }}">Segnala distributore</a>
+
+            </nav>
         </footer>
         {% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+        <script src="{{ asset('/js/script.js') }}"></script>
+        <!-- Bootstrap -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <!-- fine Bootstrap -->
+        {% endblock %}
     </body>
 </html>
