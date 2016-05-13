@@ -18,7 +18,7 @@
         {% block header %}
         <nav>
             <header>
-                <a href="{{ url('main_homepage') }}"><h1>il Tabaccaio</h1></a>
+                <a href="{{ url('main_homepage') }}"><div id="logo"><h1>il Tabaccaio 24h</h1></div></a>
             </header>
         </nav>
         {% endblock %}
@@ -31,9 +31,12 @@
             <!-- Chi Siamo  -  Privacy Policy  -  Segnala Distributore -->
             <nav>
 
-                <a href="{{ url('footer_chisiamo') }}">Chi siamo</a><span>     -     </span>
-                <a href="{{ url('footer_privacy') }}">Privacy policy</a><span>     -     </span>
-                <a href="{{ url('footer_segnalazioni') }}">Segnala distributore</a>
+                <div class="buttonFooter"><a href="{{ url('footer_chisiamo') }}">Chi siamo</a></div>
+
+                <div class="buttonFooter"><a href="{{ url('footer_privacy') }}">Privacy policy</a></div>
+
+                <div class="loghiSocial"><a href="https://www.facebook.com/"><img class="immSocial" src="{{asset('img/fb.png') }}" alt="seguici su facebook" /></a></div>
+                <div class="loghiSocial"><a href="https://plus.google.com/"><div><img class="immSocial" src="{{ asset('img/google.png') }}" alt="seguici su google" /></a></div>
 
             </nav>
         </footer>
