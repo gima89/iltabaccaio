@@ -2,12 +2,14 @@ body{
     padding: 0;
     margin: auto;
     text-align: center;
+    background-image: url("/img/sfondo1.jpg");
     /*background-color: grey;*/
 }
 
 footer{
-    color: #000;
-    background-color: #fff;
+    color: #2A2829;
+    background-color: #493737;
+    text-shadow: -1px 0 #E9E2DC, 0 1px #E9E2DC, 1px 0 #E9E2DC, 0 -1px #E9E2DC;
     height: 8%;
     margin-top: 10px;
     margin-left: auto;
@@ -15,37 +17,37 @@ footer{
     bottom: 0px;
     text-align: center;
     position: relative;
-    border-width: 15px;
-    border-color: #000;
-    border-style: solid;
-    font-family: helvetica;
-    font-weight: bold;
-    font-size: 50px;
+    font-family: rechtman;
+    font-size: 40px;
     padding: 5px;
+    opacity: 0.9;
+    box-shadow: 5px 5px 50px #2A2829;
 }
 
 footer a{
-	color:#000;
+	color:#2A2829;
 	text-decoration:none;
+    opacity: 0.7;
 }
 
 footer a:hover{
-	color:#CCCCCC; /*azzurro*/
+	color:#2A2829;
+    text-decoration: none;
+    opacity: 1.3;
 }
 
 header{
-    background-color: #fff;
+    background-color: #7B3B3B;
     /*height: 25%;*/
     width: 100%;
     margin: auto;
     top: 0px;
     text-align: center;
+    padding-top: 15px;
     position: fixed;
-    border-top-color: #C60000;
-    border-top-style: solid;
-    border-top-width: 70px;
-    z-index: 10;
-    text-decoration: underline;
+    z-index: 9;
+    opacity: 0.7;
+    box-shadow: 5px 5px 50px #2A2829;
     /*border-bottom-color: #C60000;
     border-bottom-style: solid;
     border-bottom-width: 5px;*/
@@ -64,16 +66,20 @@ header a:hover{
 }
 
 h1{
-    font-family: marlboro;
-    font-size: 90px;
-    color: #000;
+    font-family: rechtman;
+    font-size: 130px;
+    color: #2A2829;
+    text-shadow: -1px 0 #E9E2DC, 0 1px #E9E2DC, 1px 0 #E9E2DC, 0 -1px #E9E2DC;
+    z-index: 10;
 }
 
 h2{
     font-family: marlboro;
     font-size: 40px;
-    color: #000;
+    font-style: italic;
+    color: #E9E2DC;
     text-align: center;
+    text-shadow: -3px 0 #493737, 0 3px #493737, 3px 0 #493737, 0 -3px #493737;
 }
 
 h4{
@@ -87,7 +93,7 @@ h4{
   margin: auto;
   border-style: solid;
   border-width: 5px;
-  border-color: #000;
+  border-color: #493737;
   margin-top: 5px;
 }
 
@@ -108,12 +114,13 @@ h4{
 .search input{
     border-style: solid;
     border-width: 5px;
-    border-color: #000;
+    border-color: #493737;
     font-family: marlboro;
     font-size: 30px;
     margin-top: 10px;
     text-align: center;
-    color: #222222;
+    color: #493737;
+    background-color: #E9E2DC;
 }
 
 .searchForm{
@@ -125,6 +132,9 @@ h4{
     font-family: marlboro;
     font-size: 30px;
     margin-top: 10px;
+    color: #E9E2DC;
+    text-shadow: -3px 0 #493737, 0 3px #493737, 3px 0 #493737, 0 -3px #493737;
+
 }
 
 /*IMPORT SELECTORS*/
@@ -132,4 +142,9 @@ h4{
 @font-face {
     font-family: marlboro;
     src: url(../font/Marlboro.ttf);
+}
+
+@font-face {
+    font-family: rechtman;
+    src: url(../font/RECHTMAN.ttf);
 }
