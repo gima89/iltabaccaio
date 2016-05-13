@@ -35,7 +35,7 @@ footer a:hover{
 
 header{
     background-color: #fff;
-    height: 15%;
+    /*height: 25%;*/
     width: 100%;
     margin: auto;
     top: 0px;
@@ -45,6 +45,7 @@ header{
     border-top-style: solid;
     border-top-width: 70px;
     z-index: 10;
+    text-decoration: underline;
     /*border-bottom-color: #C60000;
     border-bottom-style: solid;
     border-bottom-width: 5px;*/
@@ -59,6 +60,7 @@ header a{
 
 header a:hover{
 	color: #4B494A;
+    text-decoration:none;
 }
 
 h1{
@@ -71,6 +73,11 @@ h2{
     font-family: marlboro;
     font-size: 40px;
     color: #000;
+    text-align: center;
+}
+
+h4{
+    font-size: 18px;
     text-align: center;
 }
 

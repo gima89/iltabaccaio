@@ -7,7 +7,7 @@ function initMap() {
 
     tabaccherie.forEach(function (tabaccheria) {
         var infowindow = new google.maps.InfoWindow({
-            content: '<h1>' + tabaccheria.name + '</h1>'
+            content: '<h4>' + tabaccheria.name + '</h4>'
         });
         var marker = new google.maps.Marker({
             position: {
