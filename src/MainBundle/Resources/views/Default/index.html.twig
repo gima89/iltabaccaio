@@ -9,7 +9,7 @@
                     <form class="search" action="{{url('main_filter')}}" method="post">
                         <br />
                             <!-- <input class="searchForm" type="text" name="city" value="" placeholder="Città"> -->
-                        <label class="indexLabel" >Sigarette&nbsp;<input class="indexInput" type="checkbox" name="sigarette" checked></label><br>
+                        <!-- <label class="indexLabel" >Sigarette&nbsp;<input class="indexInput" type="checkbox" name="sigarette" checked></label><br>
 
                         <label class="indexLabel">Tabacco&nbsp;<input class="indexInput" type="checkbox" name="tabacco" checked></label><br>
 
@@ -17,20 +17,77 @@
 
                         <label class="indexLabel">Accendini&nbsp;<input class="indexInput" type="checkbox" name="accendini"></label><br>
 
-                        <label class="indexLabel">Condom&nbsp;<input class="indexInput" type="checkbox" name="comdom"></label><br>
+                        <label class="indexLabel">Condom&nbsp;<input class="indexInput" type="checkbox" name="comdom"></label><br> -->
+
+                        <label class="indexLabel">Prodotti:</label><br>
+
+                        <label class="indexLabel" >
+                            <div class="loghiMainDiv">
+                                <img class="loghiMain" src="{{ asset('img/sigarette.png') }}" alt="Sigarette" title="Sigarette"/>
+                            </div>
+                            <input type="hidden" name="sigarette" value=0>
+                            <input class="indexInput" type="checkbox" name="sigarette" value=1 checked>
+                        </label>
+
+                        <label class="indexLabel">
+                            <div class="loghiMainDiv">
+                                <img class="loghiMain" src="{{ asset('img/tabacco.png') }}" alt="Tabacco" title="Tabacco" />
+                            </div>
+                            <input type="hidden" name="tabacco" value=0>
+                            <input class="indexInput" type="checkbox" name="tabacco" value=1 checked>
+                        </label>
+
+                        <label class="indexLabel">
+                            <div class="loghiMainDiv">
+                                <img class="loghiMain" src="{{ asset('img/kitcartine.png') }}" alt="Kit Cartine" title="Kit Cartine" />
+                            </div>
+                            <input type="hidden" name="kitcartine" value=0>
+                            <input class="indexInput" type="checkbox" name="kitcartine" value=1>
+                        </label>
+
+                        <label class="indexLabel">
+                            <div class="loghiMainDiv">
+                                <img class="loghiMain" src="{{ asset('img/accendini.png') }}" alt="Accendini" title="Accendini" />
+                            </div>
+                            <input type="hidden" name="accendini" value=0>
+                            <input class="indexInput" type="checkbox" name="accendini" value=1>
+                        </label>
+
+                        <label class="indexLabel">
+                            <div class="loghiMainDiv">
+                                <img class="loghiMain" src="{{ asset('img/condom.png') }}" alt="Condom" title="Condom" />
+                            </div>
+                            <input type="hidden" name="condom" value=0>
+                            <input class="indexInput" type="checkbox" name="condom" value=1>
+                        </label>
+                        <br>
+
 
                         <br>
 
                         <label class="indexLabel">Resto massimo erogabile:</label><br>
 
-                        <label class="indexLabel">Fino a 3€ <input type="radio" name="restomax" value="3" checked></label><br>
+                        <label class="indexLabel">
+                            <div class="loghiMainDiv">
+                                <img class="loghiMain" src="{{ asset('img/2euro.png') }}" alt="2euro" title="Fino a 3€" />
+                                <img class="loghiMain" src="{{ asset('img/1euro.png') }}" alt="1euro" title="Fino a 3€" />
+                            </div>
+                            <input type="radio" name="restomax" value="3" checked>
+                        </label>
 
-                        <label class="indexLabel">Fino a 5€ <input type="radio" name="restomax" value="5"></label><br>
+                        <label class="indexLabel">
+                            <img class="loghiMain2" src="{{ asset('img/5euro.png') }}" alt="5euro" title="Fino a 5€" />
+                            <input type="radio" name="restomax" value="5">
+                        </label>
 
-                        <label class="indexLabel">Fino a 10€ <input type="radio" name="restomax" value="10"></label><br>
+                        <label class="indexLabel">
+                            <img class="loghiMain2" src="{{ asset('img/10euro.png') }}" alt="10euro" title="Fino a 10€" />
+                            <input type="radio" name="restomax" value="10">
+                        </label>
+
                         <!-- <input class="searchForm" type="number" name="restomax" min="2" max="15" placeholder="Resto massimo"> -->
                         <br>
-                            <input class="indexInput" type="submit" name="invia" value="Filtra per prodotti">
+                            <input class="indexInput" type="submit" name="invia" value="Filtra">
                     </form>
             </div>
         </div>

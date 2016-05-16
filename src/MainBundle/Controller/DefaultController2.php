@@ -20,11 +20,15 @@ class DefaultController extends Controller
 
     public function filterAction(Request $request)
     {
-        $sigarette = $request->get('sigarette');
-        $tabacco = $request->get('tabacco');
-        $kitcartine = $request->get('kitcartine');
-        $accendini = $request->get('accendini');
-        $condom = $request->get('condom');
+        if(null!==($request->get('sigarette'))) $sigarette= true; else $sigarette =  false;
+        if(null!==($request->get('tabacco'))) $tabacco= true; else $tabacco =  false;
+        if(null!==($request->get('kitcartine'))) $kitcartine= true; else $kitcartine =  false;
+        if(null!==($request->get('accendini'))) $accendini= true; else $accendini =  false;
+        if(null!==($request->get('condom'))) $condom= true; else $condom =  false;
+        // $tabacco = $request->get('tabacco')=='on' ? true : false;
+        // $kitcartine = $request->get('kitcartine')=='on'? true : false;
+        // $accendini = $request->get('accendini')=='on' ? true : false;
+        // $condom = $request->get('condom')=='on' ? true : false;
         $restomax = $request->get('restomax')*1;
 
         // $query="SELECT d FROM MainBundle:Distributore d
@@ -32,14 +36,14 @@ class DefaultController extends Controller
         // if ($sigarette) $sql.=" AND isSigarette = 1 ";
         // else " AND isSigarette =0";
 
-        $distributori = $this->getDoctrine()->getManager()->createQuery(
+        $distributori = $this->getDoctrine()->getEntityManager()->createQuery(
                 "SELECT d FROM MainBundle:Distributore d
-                WHERE d.isSigarette = $sigarette
-                AND d.isTabacco = $tabacco
-                AND d.isKitcartine = $kitcartine
-                AND d.isAccendini = $accendini
-                AND d.isCondom = $condom
-                AND d.restomax <= $restomax"
+                WHERE isSigarette = $sigarette
+                AND isTabacco = $tabacco
+                AND isKitcartine = $kitcartine
+                AND isAccendini = $accendini
+                AND isCondom = $condom
+                AND restomax <= $restomax"
             )->getResult();
         var_dump($distributori);
         return $this->redirect('MainBundle:Default:index.html.twig',[
