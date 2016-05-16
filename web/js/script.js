@@ -2,8 +2,11 @@ function initMap() {
     var mapDiv = document.getElementById('map');
     var map = new google.maps.Map(mapDiv, {
         center: {lat: 45.466095, lng: 9.186005},
-        zoom: 12
+        zoom: 12,
+        scrollwheel: false,
+        // draggable: false
     });
+
 
     tabaccherie.forEach(function (tabaccheria) {
         var infowindow = new google.maps.InfoWindow({

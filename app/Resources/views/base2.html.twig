@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="Giacomo Marolla" />
+        <meta name="description" content="Trova il distributore di sigarette più vicino a te!" />
+        <title>{% block title %}il Tabaccaio{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('img/tabaccaio_favicon.png') }}" />
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- fine Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/reset.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" />
+    </head>
+    <body>
+
+        {% block header %}
+        <nav>
+            <header>
+                <a href="{{ url('main_homepage') }}"><div id="logo"><h1>il Tabaccaio 24h</h1></div></a>
+            </header>
+        </nav>
+        {% endblock %}
+
+        {% block body %}{% endblock %}
+
+        {% block footer %}
+        <footer>
+            <!-- Il footer nuoce gravemente alla salute -->
+            <!-- Chi Siamo  -  Privacy Policy  -  Segnala Distributore -->
+            <nav>
+
+                <div class="buttonFooter"><a href="{{ url('footer_chisiamo') }}">Chi siamo</a></div>
+
+                <div class="buttonFooter"><a href="{{ url('footer_privacy') }}">Privacy policy</a></div>
+
+                <div class="loghiSocial"><a href="https://www.facebook.com/"><img class="immSocial" src="{{asset('img/fb.png') }}" alt="seguici su facebook" /></a></div>
+                <div class="loghiSocial"><a href="https://plus.google.com/"><div><img class="immSocial" src="{{ asset('img/google.png') }}" alt="seguici su google" /></a></div>
+
+            </nav>
+        </footer>
+        {% endblock %}
+        {% block javascripts %}
+        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+        <script src="{{ asset('/js/script.js') }}"></script>
+        <!-- Bootstrap -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <!-- fine Bootstrap -->
+        {% endblock %}
+    </body>
+</html>

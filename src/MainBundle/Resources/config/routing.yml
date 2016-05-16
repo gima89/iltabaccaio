@@ -2,6 +2,10 @@ main_homepage:
     path:     /
     defaults: { _controller: MainBundle:Default:index }
 
+main_filter:
+    path:     filter
+    defaults: { _controller: MainBundle:Default:filter }
+
 main_results:
     path:     results
     defaults: { _controller: MainBundle:Default:results }

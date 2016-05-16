@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="bodyWrapper">
+    <div class="segnalazioni">
+        <h2>Cerca un distributore</h2>
+            <form class="search" action="index.html" method="post">
+                <br />
+                    <!-- <input class="searchForm" type="text" name="city" value="" placeholder="Città"> -->
+                <label class="indexLabel" for="sigarette">&nbsp;&nbsp;Sigarette&nbsp;</label>
+                    <input class="indexInput" type="checkbox" name="sigarette" value="" checked><br>
+                <label class="indexLabel" for="tabacco">&nbsp;&nbsp;Tabacco&nbsp;</label>
+                    <input class="indexInput" type="checkbox" name="tabacco" value="" checked><br>
+                <label class="indexLabel" for="comdom">&nbsp;&nbsp;Condom&nbsp;</label>
+                <input class="indexInput" type="checkbox" name="comdom" value=""><br>
+                    &nbsp;&nbsp;<input class="searchForm" type="number" name="resto" min="2" max="15" placeholder="Resto massimo"><br>
+                    <input class="indexInput" type="submit" name="invia" value="Filtra per prodotti">
+            </form>
+    </div>
+</div>
+
+<div class="bodyWrapper">
+    <div id="map"></div>
+</div>
+
+
+<div class="bodyWrapper">
+    <div class="segnalazioni">
+        <h2>Segnalaci un distributore non presente sulla mappa</h2>
+        <form class="segnala" action="segnalazioni.html" method="post"><br>
+            <textarea class="formText" name="nuovo distributore" rows="8" cols="40" placeholder="Inserisci qua il testo della segnalazione"></textarea><br>
+            <!-- <input class="formText" type="text" name="nuovo distributore" value=""><br> -->
+            <input class="indexInput" type="submit" name="invia" value="Invia segnalazione">
+
+        </form>
+    </div>
+</div>
+<!-- immagine mappa -->
+<!-- <img id="mapSample" src="{{ asset('img/map_sample.png') }}" alt="mappa" /> -->
+
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript">
+var tabaccherie = {{ tabaccherie|json_encode|raw }};
+</script>
+<script src="{{ asset('/js/script.js') }}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?apiKey=AIzaSyAa9QggxFYscZS4pJl11daPuXg9OxoCTrg&callback=initMap" async defer></script>
+{% endblock %}

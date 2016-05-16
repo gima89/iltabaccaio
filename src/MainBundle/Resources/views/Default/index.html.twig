@@ -2,40 +2,57 @@
 
 {% block body %}
 
-<div class="bodyWrapper">
-    <div class="segnalazioni">
-        <h2>Cerca un distributore</h2>
-            <form class="search" action="index.html" method="post">
-                <br />
-                    <!-- <input class="searchForm" type="text" name="city" value="" placeholder="Città"> -->
-                <label class="indexLabel" for="sigarette">&nbsp;&nbsp;Sigarette&nbsp;</label>
-                    <input class="indexInput" type="checkbox" name="sigarette" value="" checked>
-                <label class="indexLabel" for="tabacco">&nbsp;&nbsp;Tabacco&nbsp;</label>
-                    <input class="indexInput" type="checkbox" name="tabacco" value="" checked>
-                <label class="indexLabel" for="comdom">&nbsp;&nbsp;Condom&nbsp;</label>
-                <input class="indexInput" type="checkbox" name="comdom" value="">
-                    &nbsp;&nbsp;<input class="searchForm" type="number" name="resto" min="2" max="15" placeholder="Resto massimo"><br>
-                    <input class="indexInput" type="submit" name="invia" value="Filtra per prodotti">
-            </form>
-    </div>
+<div class="row">
+        <div class="bodyWrapper">
+            <div class="segnalazioni">
+                <h2>Cerca un distributore</h2>
+                    <form class="search" action="{{url('main_filter')}}" method="post">
+                        <br />
+                            <!-- <input class="searchForm" type="text" name="city" value="" placeholder="Città"> -->
+                        <label class="indexLabel" >Sigarette&nbsp;<input class="indexInput" type="checkbox" name="sigarette" checked></label><br>
+
+                        <label class="indexLabel">Tabacco&nbsp;<input class="indexInput" type="checkbox" name="tabacco" checked></label><br>
+
+                        <label class="indexLabel">Kit Cartine&nbsp;<input class="indexInput" type="checkbox" name="kitcartine"></label><br>
+
+                        <label class="indexLabel">Accendini&nbsp;<input class="indexInput" type="checkbox" name="accendini"></label><br>
+
+                        <label class="indexLabel">Condom&nbsp;<input class="indexInput" type="checkbox" name="comdom"></label><br>
+
+                        <br>
+
+                        <label class="indexLabel">Resto massimo erogabile:</label><br>
+
+                        <label class="indexLabel">Fino a 3€ <input type="radio" name="restomax" value="3" checked></label><br>
+
+                        <label class="indexLabel">Fino a 5€ <input type="radio" name="restomax" value="5"></label><br>
+
+                        <label class="indexLabel">Fino a 10€ <input type="radio" name="restomax" value="10"></label><br>
+                        <!-- <input class="searchForm" type="number" name="restomax" min="2" max="15" placeholder="Resto massimo"> -->
+                        <br>
+                            <input class="indexInput" type="submit" name="invia" value="Filtra per prodotti">
+                    </form>
+            </div>
+        </div>
 </div>
 
 <div class="bodyWrapper">
     <div id="map"></div>
 </div>
 
+    <div class="row">
+        <div class="bodyWrapper">
+            <div class="segnalazioni">
+                <h2>Segnalaci un distributore non presente sulla mappa</h2>
+                <form class="segnala" action="segnalazioni.html" method="post"><br>
+                    <textarea class="formText" name="nuovo distributore" rows="8" cols="40" placeholder="Inserisci qua il testo della segnalazione"></textarea><br>
+                    <!-- <input class="formText" type="text" name="nuovo distributore" value=""><br> -->
+                    <input class="indexInput" type="submit" name="invia" value="Invia segnalazione">
 
-<div class="bodyWrapper">
-    <div class="segnalazioni">
-        <h2>Segnalaci un distributore non presente sulla mappa</h2>
-        <form class="segnala" action="segnalazioni.html" method="post"><br>
-            <textarea class="formText" name="nuovo distributore" rows="8" cols="40" placeholder="Inserisci qua il testo della segnalazione"></textarea><br>
-            <!-- <input class="formText" type="text" name="nuovo distributore" value=""><br> -->
-            <input class="indexInput" type="submit" name="invia" value="Invia segnalazione">
-
-        </form>
+                </form>
+            </div>
+        </div>
     </div>
-</div>
 <!-- immagine mappa -->
 <!-- <img id="mapSample" src="{{ asset('img/map_sample.png') }}" alt="mappa" /> -->
 
